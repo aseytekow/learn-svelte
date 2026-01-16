@@ -1,8 +1,9 @@
 <script>
   import BasicMultiplier from "./lib/BasicMultiplier.svelte";
   import CarSearch from "./lib/CarSearch.svelte";
+  import Switch from "./lib/Switch.svelte";
 
-  let components = [ BasicMultiplier, CarSearch ];
+  let components = [ BasicMultiplier, CarSearch, Switch ];
   let current = $state(0);
   let Component = $derived(components[current]);
 
