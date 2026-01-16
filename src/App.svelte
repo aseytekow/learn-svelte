@@ -4,10 +4,10 @@
 
   let components = [ BasicMultiplier, CarSearch ];
   let current = $state(0);
+  let Component = $derived(components[current]);
 
 </script>
-
-<svelte:component this={components[current]} />
+<Component />
 <div class="components-changer">
   <button onclick={() => current = (current - 1 + components.length) % components.length}>&lt;</button>
   <button onclick={() => current = (current + 1) % components.length}>&gt;</button>
